@@ -1,0 +1,867 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue: #6c6cfd;
+    --white: #fff;
+    --black: #111;
+    --grey: #696969;
+    /* --green: #2ebd59; */
+    --yellow: #eda601;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding: 0;
+}
+
+/* header */
+header{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    height: 9vh;
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+div.logo-div{
+    width: 25%;
+    margin-left: 10px;
+}
+
+div.logo-div h1{
+    font-size: 1.2rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+@media (min-width: 769px) and (max-width:991px){
+    header{
+        width: 95%;
+    }
+
+    div.logo-div{
+        width: 20%;
+    }
+}
+
+@media (max-width: 768px){
+    header{
+        width: 90%;
+    }
+
+    div.logo-div{
+        margin-left: 2px;
+    }
+}
+
+nav.large-screen{
+    width: 65%;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li a, .mobile-nav-div ul li a{
+    padding: 4px;
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 500;
+}
+
+nav ul li a:hover, .mobile-nav-div ul li a:hover{
+    border-bottom: 2px solid var(--blue);
+}
+
+nav.large-screen ul li a.login{
+    margin-right: -100px;
+}
+
+nav ul li a.current:link, nav ul li a.current:visited {
+    border-bottom: 2px solid var(--blue);
+}
+
+button.sign-up{
+    color: var(--blue);
+    background: var(--white);
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    padding: 8px 15px;
+}
+
+button.sign-up:hover{
+    color: var(--white);
+    background: var(--blue) ;
+}
+
+/* styling mobile navigation & icons */
+div.mobile-nav{
+    display: none;
+}
+
+.bi-list, .bi-x{
+    display: none;
+    color: var(--blue);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+@media (min-width: 769px) and (max-width:991px){
+    nav.large-screen{
+        width: 75%;
+    }
+
+    nav ul{
+        justify-content: space-between;
+    }
+
+    nav.large-screen ul li a.login{
+        margin-right: -10px;
+    }
+
+}
+
+@media (max-width: 768px){
+    nav.large-screen{
+        display: none;
+    }
+
+    .bi-list, .bi-x{
+        display: block;
+    }
+
+    div.mobile-nav{
+        width: 100%;
+        height: 100vh;
+        padding: 10px;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: var(--white);
+        z-index: 8;
+    }
+
+    nav.mobile-screen{
+        width: 80%;
+        margin: auto;
+    }
+
+    nav.mobile-screen ul{
+        flex-direction: column;
+    }
+
+    nav.mobile-screen ul li{
+        margin-bottom: 20px;
+    }
+}
+
+/* webpage body/section */
+section{
+    width: 75%;
+    margin: auto;
+}
+
+@media (min-width: 769px) and (max-width:991px){
+    section{
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px){
+    section{
+        width: 90%;
+    }
+}
+
+/* banner below header section */
+div.banner{
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+/* banner text */
+div.banner div.text{
+    width: 45%;
+} 
+
+div.text h1{
+    text-align: justify;
+    color: var(--black);
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+div.text p{
+    text-align: justify;
+    color: var(--black);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+div.text div.input{
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+div.input input[type=search]{
+    width:70% ;
+    padding: 10px 12px;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    background: var(--white);
+    outline: none;
+}
+
+div.input input[type=search]:focus{
+    border: 1px solid var(--blue);
+}
+
+div.input input[type=submit]{
+    width: 30%;
+    padding: 10px 12px;
+    background: var(--blue);
+    color: var(--white);
+    outline: none;
+    border: 1px solid var(--blue);
+}
+
+div.input input[type=submit]:hover{
+    color: var(--white);
+    background: #273B7D;
+    border: 1px solid #273B7D;
+}
+
+/* banner image */
+div.banner div.image{
+    width: 50%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+div.blue-circle{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    background: var(--blue);
+    align-self: flex-start;
+    z-index: 2;
+}
+
+figure {
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;  
+    align-self: center;
+    z-index: 5;
+    position: relative;
+}
+
+figure img {
+    max-width: 80%;
+    margin: auto;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+figcaption {
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: var(--white);
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute;
+    left: 30%;
+    bottom: 1px;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+figcaption:hover{
+    transform:scale(1.02)
+}
+
+.blue{
+    color: var(--blue);
+}
+
+div.white-circle{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 5px solid var(--blue);
+    position: absolute;
+    bottom: 5px;
+    right: 60px;
+    background: var(--white);
+    align-self: flex-end;
+    z-index: 2;
+}
+
+@media (min-width: 769px) and (max-width:991px){
+    div.text h1{
+        font-size: 2.2rem;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px){
+    div.banner{
+        flex-direction: column;
+    }
+
+    div.banner div.text, div.banner div.image{
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    div.text h1{
+        text-align: left;
+        font-size: 1.9rem;
+    }
+
+    div.text p{
+        font-size: 0.85rem;
+    }
+
+    figure{
+        width: 95%;
+    }
+
+    figure img{
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    div.blue-circle{
+        width: 60px;
+        height: 60px;
+        left: 40px;
+    }
+
+    div.white-circle{
+        width: 60px;
+        height: 60px;
+        right: 40px;
+    }
+}
+
+/* partner brands section */
+div.review-row{
+    width: 100%;
+    margin: 50px 0;
+}
+
+div.review-row h2{
+    font-weight: 600;
+}
+
+span.blue-bottom{
+    border-bottom: 3px solid var(--blue);
+}
+
+div.brands{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.brand{
+    width: 20%;
+}
+
+div.brand img{
+    width: 80%;
+    margin: auto;
+}
+
+@media (max-width: 768px){
+    div.brands{
+        justify-content:space-around;
+        flex-wrap: wrap;
+    }
+
+    div.brand{
+        width: 48%;
+        margin-bottom: 5px;
+    }
+}
+
+/* mentor and top courses section */
+.mentors, .learning{
+    width: 100%;
+    margin: 50px 0;
+}
+
+.learning h3{
+    margin-bottom: 25px;
+    color: var(--black);
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.mentors h3{
+    margin-bottom: 25px;
+    color: var(--black);
+    font-size: 1.3rem;
+}
+
+div.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.learning div.cards div.card{
+    width: 30%;
+    height: 235px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+.mentors div.cards div.card{
+    width: 22%;
+    height: 295px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-flow: column;
+}
+
+div.card:hover{
+    transform: scale(1.01);
+}
+
+img.card-image{
+    width: 100%;
+    height: 70%;
+}
+
+div.card-text{
+    background: var(--white);
+    padding: 1px 13px;
+}
+
+div.card-text p{
+    font-size: 1rem;  
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+div.card-text p.reduce-margin{
+    margin-bottom: -6px;
+}
+
+div.card-text span{
+    font-size: 0.85rem;
+}
+
+div.card-text span.title{
+    color: var(--grey);
+    font-weight: 500;
+}
+
+div.spans{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.spans span{
+    font-size: 0.75rem;
+    margin-top: -3px;
+    font-weight: 500;
+}
+
+.bi-clock, .bi-alarm{
+    margin-right: 3px;
+}
+
+@media (min-width: 769px) and (max-width:991px){
+    .learning div.cards div.card{
+        width: 32%;
+        height: 250px;
+    }
+
+    .mentors div.cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .mentors div.cards div.card{
+        width: 40%;
+        height: 290px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px){
+    div.cards{
+        flex-direction: column;
+    }
+
+    .learning div.cards div.card{
+        width: 90%;
+        height: 230px;
+        margin-bottom: 30px;
+    }
+    
+    .mentors div.cards div.card{
+        width: 80%;
+        height: 290px;
+        margin-bottom: 30px;
+    }
+
+    .learning h3, .mentors h3{
+        margin-bottom: 30px;
+    }
+}
+
+/* about section */
+.about{
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-start;
+}
+
+.text-div{
+    width: 50%;
+    padding: 10px 70px;
+}
+
+.image-div{
+    width: 38%;
+    padding: 0;
+    text-align: right;
+}
+
+.text-div h3{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.text-div p{
+    font-size: 0.9rem;
+}
+
+button.btn-start{
+    width: 40%;
+    padding: 9px 11px;
+    border-radius: 2px;
+    border: 1px solid var(--blue);
+    outline: none;
+    background-color: var(--white);
+    color: var(--blue);
+    font-weight: 500;
+}
+
+button.btn-start:hover{
+    color: var(--white);
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+}
+
+.about-image{
+    width: 100%;
+    max-height: 450px;
+    border-radius: 2px;
+}
+
+@media (min-width: 769px) and (max-width:991px){
+    .text-div, .image-div{
+        width: 45%;
+    }
+
+    .text-div{
+        padding: 10px 15px;
+    }
+
+    button.btn-start{
+        width: 60%;
+    }
+
+    .about-image{
+        max-height: 450px;
+    }
+}
+
+@media (max-width: 768px){
+    .about{
+        flex-direction: column;
+    }
+
+    .text-div, .image-div{
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .text-div{
+        padding: 5px 15px;
+    }
+
+    button.btn-start{
+        width: 60%;
+    }
+
+    .about-image{
+        max-height: 400px;
+    }
+}
+
+/* students' review section */
+div.students-review{
+    width: 100%;
+    margin: 50px 0;
+}
+
+div.students-review h3{
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+div.students-review h3 i.review-star{
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+    color: var(--yellow);
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 2px 5px;
+}
+
+div.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+}
+
+div.column{
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.first, .second{
+    height: 110px;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+}
+
+img.student-image{
+    width: 15%;
+    height: 65px;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+}
+
+div.student-review{
+    width: 72%;
+}
+
+div.student-review p{
+    font-size: 0.8rem;
+}
+
+.student-name{
+    margin-top: 0;
+    font-weight: 600;
+}
+
+span i.review-star{
+    color: var(--yellow);
+}
+
+@media (min-width: 769px) and (max-width:991px){
+    div.row{
+        flex-direction: row;
+    }
+
+    div.column{
+        width: 49%;
+    }
+
+    .first, .second{
+        height: 160px;
+    }
+
+    img.student-image{
+        width: 15%;
+        height: 40px;
+    }
+
+    div.student-review{
+        width: 65%;
+    }
+}
+
+@media (max-width: 768px){
+    div.row{
+        flex-direction: column;
+    }
+
+    div.column{
+        width: 100%;
+    }
+
+    .first, .second{
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    img.student-image{
+        width: 18%;
+        height: 50px;
+    }
+
+    div.student-review{
+        width: 65%;
+    }
+}
+
+div.circles{
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+div.circle{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+div.one{
+    background: #8787fd;
+}
+
+div.two{
+    background: #a3a3fd;
+}
+
+div.three{
+    background: #b6b6fa;
+}
+
+div.four{
+    background:  #cacafc;
+}
+
+/* footer section */
+footer{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.myfooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 20px 50px;  
+}
+
+.foot{
+    width: 24%;
+    padding: 10px;
+}
+
+.foot p{
+    font-size: 0.95rem;
+}
+
+.foot p:hover{
+    cursor: pointer;
+    transform: scale(1.01)
+}
+
+.foot i{
+    font-size: 0.9rem;
+    margin-right: 5px;
+}
+
+/* .copyright{
+    width: 100%;
+    margin: 0;
+    padding: 2px 5px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--green);
+} */
+
+@media (min-width: 769px) and (max-width:991px){
+    .myfooter{
+        flex-direction: row;
+        padding: 10px 20px;
+    }
+
+    .foot{
+        width: 24%;
+    }
+}
+
+@media (max-width: 768px){
+    .myfooter{
+        flex-direction: column;
+        padding: 15px 30px;
+    }
+
+    .foot{
+        width: 90%;
+    }
+}

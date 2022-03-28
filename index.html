@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <title>Finder</title>
+</head>
+<body>
+<!-- Header -->
+    <header>
+        <div class="logo-div">
+            <h1 title="Finder.ng">Finder</h1>
+        </div>
+
+        <nav class="large-screen">
+            <ul>
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="#learning">Courses</a></li>
+                <li><a href="" class="login">Login</a></li>
+                    <a href="">
+                        <button class="sign-up">Sign Up</button>
+                    </a>
+            </ul>
+        </nav>
+
+        <!-- mobile nav icon -->
+        <i class="bi bi-list" id="icon" onclick="toggleNav()"></i>
+    </header>
+
+<!-- mobile navigation -->
+    <div class="mobile-nav">
+        <nav class="mobile-screen">
+            <ul>
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="#learning">Courses</a></li>
+                <li><a href="" class="login">Login</a></li>
+                <a href="">
+                    <button class="sign-up">Sign Up</button>
+                </a>
+            </ul>
+        </nav>
+    </div>
+
+ 
+    <!-- Banner below the header -->
+    <section>
+        <div class="banner">
+            <div class="text">
+                <h1>Gain relevant and top industry skills</h1>
+
+                <p>
+                    We provide a sustainable platform for people to learn and grow
+                    their skillset. Finder is a platform where people develop their 
+                    own potential. Register and start learning right away.
+                </p>
+
+                <div class="input">
+                    <input type="search" autofocus required placeholder="Want to learn? Search for a course..">
+                    <input type="submit" value="Search">
+                </div>
+            </div>
+    
+            <div class="image">
+                <div class="blue-circle">
+
+                </div>
+
+                <figure>
+                    <img src="assets/male-student.jpg" alt="Photo by Oladimeji Ajegbile from Pexels">
+                    <figcaption> <span class="blue">10k+</span> students</figcaption>
+                </figure>
+
+                <div class="white-circle">
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Review row -->
+    <section>
+        <div class="review-row">
+            <h2><span class="blue-bottom">We</span> are trusted by</h2>
+
+            <div class="brands">
+                <div class="brand">
+                    <img src="assets/booking-logo.svg" alt="Booking.com" class="booking">
+                </div>
+        
+                <div class="brand">
+                        <img src="assets/google-logo.svg" alt="Google" class="google">
+                </div>
+        
+                <div class="brand">
+                    <img src="assets/facebook-logo.svg" alt="Facebook" class="facebook">
+                </div>
+        
+                <div class="brand">
+                    <img src="assets/whogohost-logo.png" alt="whogohost" class="whogohost">
+                </div>
+        
+                <div class="brand">
+                    <img src="assets/spotify-logo.svg" alt="Spotify" class="spotify">
+                </div>
+            </div>
+        </div>
+    </section>
+        
+<!-- Popular Learning Path Row -->
+    <section>
+        <div class="learning" id="learning">
+            <h3>Popular L<span class="blue-bottom">earn</span>ing Paths</h3>
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/programmer.jpg" alt="Photo by Christina Morillo from Pexels" class="card-image">
+                    <div class="card-text">
+                        <p>Become a Software Developer</p>
+                        <div class="spans">
+                            <span>14 Courses</span>
+                            <span><i class="bi bi-alarm blue"></i>20hr 14min</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="assets/designer.jpg" alt="Photo by Ketut Subiyanto from Pexels" class="card-image">
+                    <div class="card-text">
+                        <p>Become a UX Designer</p>
+                        <div class="spans">
+                            <span>14 Courses</span>
+                            <span><i class="bi bi-alarm blue"></i>20hr 14min</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="assets/analyst.jpg" alt="Photo by Christina Morillo from Pexels" class="card-image">
+                    <div class="card-text">
+                        <p>Become a Business Analyst</p>
+                        <div class="spans">
+                            <span>14 Courses</span>
+                            <span><i class="bi bi-alarm blue"></i>20hr 14min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Top Mentors Row -->
+    <section>
+        <div class="mentors">
+            <h3><span class="blue-bottom">Our</span> Top Instructors</h3>
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/mentor1.jpg" alt="Photo by RODNAE Productions from Pexels" class="card-image">
+                    <div class="card-text">
+                        <p class="reduce-margin">Eniola Ajiboye</p>
+                        <span class="title">Designer</span>
+                        <br>
+                        <span class="blue"><i class="bi bi-clock"></i> 30 courses</span>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="assets/mentor2.jpg" alt="Photo by Anna Shvets from Pexels" class="card-image">
+                    <div class="card-text">
+                        <p class="reduce-margin">Eniola Ajiboye</p>
+                        <span class="title">Product Manager</span>
+                        <br> 
+                        <span class="blue"><i class="bi bi-clock"></i> 25 courses</span>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="assets/mentor3.jpg" alt="Photo by Daniel Edeke from Pexels" class="card-image">
+                    <div class="card-text">
+                        <p class="reduce-margin">Eniola Ajiboye</p>
+                        <span class="title">Data Scientist</span>
+                        <br> 
+                        <span class="blue"><i class="bi bi-clock"></i> 40 courses</span>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="assets/mentor4.jpg" alt="Photo by Diva Plavalaguna from Pexels" class="card-image">
+                    <div class="card-text">
+                        <p class="reduce-margin">Eniola Ajiboye</p>
+                        <span class="title">Software Engineer</span>
+                        <br> 
+                        <span class="blue"><i class="bi bi-clock"></i> 14 courses.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- what we do section -->
+    <section>
+        <div class="about" id="about">
+            <div class="text-div">
+                <h3>We are helping people grow their careers</h3>
+                <p>
+                    By connecting students all over the world to the best instructors,
+                    Finder is helping individuals reach their goals and pursue their dreams.
+                    We are a leading global marketplace for teaching and learning, providing
+                    millions of students with the skills they need to succeed in their career paths.  
+                </p><br>
+                <button class="btn-start">Start learning now</button>
+            </div>
+
+            <div class="image-div">
+                <img src="assets/school.jpg" alt="Students Learning" class="about-image">
+            </div>
+        </div> 
+    </section>
+
+<!-- Student Review section -->
+    <section>
+        <div class="students-review">
+            <h3>Review of <span class="blue-bottom">Our</span> Students<i class="bi bi-star-fill review-star"></i></h3>
+            <div class="row">
+                <div class="column">
+                    <div class="first">
+                        <img src="assets/student1.jpg" alt="Photo by Daniel Xavier from Pexels" class="student-image">
+                        <div class="student-review">
+                            <p class="student-name">Jimoh Lawal</p>
+                            <p>
+                                I graduated from Finder a few months back and they have helped me gain  
+                                the necessary skills needed to land my dream job. 
+                            </p>
+                        </div>
+                        <span><i class="bi bi-star-fill review-star"></i>4.5</span>
+                    </div>
+    
+                    <div class="second">
+                        <img src="assets/student1.jpg" alt="Photo by Daniel Xavier from Pexels" class="student-image">
+                        <div class="student-review">
+                            <p class="student-name">Jimoh Lawal</p>
+                            <p>
+                                I graduated from Finder a few months back and they have helped me gain  
+                                the necessary skills needed to land my dream job. 
+                            </p>
+                        </div>
+                        <span><i class="bi bi-star-fill review-star"></i>4.5</span>
+                    </div>
+                </div>
+    
+                <div class="column">
+                    <div class="first">
+                        <img src="assets/student2.jpg" alt="Photo by Mwabonje from Pexels" class="student-image">
+                        <div class="student-review">
+                            <p class="student-name">Jimoh Lawal</p>
+                            <p>
+                                Learning with Finder has contributed greatly to my career growth. 
+                                Saying a big thank you to the founders for such an amazing platform.
+                            </p>
+                        </div>
+                        <span><i class="bi bi-star-fill review-star"></i>4.5</span>
+                    </div>
+    
+                    <div class="second">
+                        <img src="assets/student2.jpg" alt="Photo by Mwabonje from Pexels" class="student-image">
+                        <div class="student-review">
+                            <p class="student-name">Jimoh Lawal</p>
+                            <p>
+                                Learning with Finder has contributed greatly to my career growth. 
+                                Saying a big thank you to the founders for such an amazing platform.
+                            </p>
+                        </div>
+                        <span><i class="bi bi-star-fill review-star"></i>4.5</span>
+                    </div>
+
+                    <div class="circles">
+                        <div class="circle one"></div>
+                        <div class="circle two"></div>
+                        <div class="circle three"></div>
+                        <div class="circle four"><div/>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section> 
+
+
+<!-- Footer Section -->
+    <footer>
+        <div class="myfooter">
+            <div class="foot">
+                <h4>Resources</h4>
+                <p>FAQs</p>
+                <p>Privacy Policy</p>
+                <p>Insurance</p>
+                <p>Covid-19</p>
+            </div>
+
+            <div class="foot">
+                <h4>Our Mentors</h4>
+                <p>Pricing</p>
+                <p>Learning</p>
+                <p>Registration</p>
+            </div>
+
+            <div class="foot">
+                <h4>Lagos</h4>
+                <p>19b Bosun Adekoye Street,Lekki Phase 1, Lagos.</p>
+
+                <h4>United States</h4>
+                <p>1778 Brown Avenue, San Francisco, CA.</p> 
+            </div>
+
+            <div class="foot">
+                <h4>Contact Us</h4>
+                <p>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-linkedin"></i>
+                    <i class="bi bi-facebook"></i>
+                    @Finder.ng
+                </p>
+                <p><i class="bi bi-telephone-fill"></i>018834567</p>
+                <p><i class="bi bi-envelope-fill"></i>info@finder.ng</p>
+                <p>Copyright &copy; <span id="year"></span>. Finder.ng</p>
+            </div>
+         </div>
+
+        <!-- <div class="copyright">
+            <p>Copyright &copy; <span id="year"></span>. Finder.ng</p>
+        </div> -->
+    </footer> 
+
+    <script src="script.js"></script>
+</body>
+</html>
